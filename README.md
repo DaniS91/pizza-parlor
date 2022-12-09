@@ -33,6 +33,10 @@ _Test: It should return a pizza object with a size property and a sauce property
 _Code: const myPizza = new Pizza("small", "red");_
 _Expected Outcome:Pizza { size: "small", sauce: "red" }_
 
+_Test: It should return a pizza object with five total properties: size, sauce, meat, veggies, and toppings_
+_Code: const myPizza = new Pizza("small", "red", "pepperoni", ["spinach", "onion"], ["parmesan", "anchovies"]);_
+_Expected Outcome:Pizza { size: "small", sauce: "red", meat: "pepperoni", veggies: ["spinach", "onion"], toppings: ["parmesan", "anchovies"] }_
+
 
 
 
