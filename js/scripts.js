@@ -34,3 +34,6 @@ Pizza.prototype.totalCost = function() {
   let baseCost = this.baseCost();
   return (toppingsCost + baseCost);
 }
+
+//UI Logic
+
