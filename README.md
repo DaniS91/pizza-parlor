@@ -37,10 +37,18 @@ _Test: It should return a pizza object with five total properties: size, sauce, 
 _Code: const myPizza = new Pizza("small", "red", "pepperoni", ["spinach", "onion"], ["parmesan", "anchovies"]);_
 _Expected Outcome:Pizza { size: "small", sauce: "red", meat: "pepperoni", veggies: ["spinach", "onion"], toppings: ["parmesan", "anchovies"] }_
 
-#### _Describe: Pizza.prototype.baseCost_
+#### _Describe: Pizza.prototype.baseCost()_
 _Test: With each instance of the Pizza object, it should return the price of the base pizza based only on the size property_
-_Code: myPizza.baseCost();_
+_Code: myPizza.sizeCost();_
 _Expected Outcome: 8_
+
+_Describe: Pizza.prototype.toppingsCost()_
+_Test: With each instance of the Pizza object, it should return the total price of the toppings based on the arrays of selected veggies and toppings_
+_Code: myPizza.toppingsCost();_
+_Expected Outcome: 2_
+
+
+
 
 
 
