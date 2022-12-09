@@ -19,3 +19,9 @@ Pizza.prototype.baseCost = function() {
     return 12;
   }
 }
+
+Pizza.prototype.toppingsCost = function() {
+  let veggiesTotal = (this.veggies.length + 1);
+  let toppingsTotal = (this.toppings.length + 1);
+  return veggiesTotal + toppingsTotal;
+}
