@@ -20,7 +20,11 @@ Pizza.prototype.baseCost = function() {
 Pizza.prototype.toppingsCost = function() {
   if (this.veggies.toString("") === "none" && this.toppings.toString("") === "none") {
     return 0;
-  } else {
+  } else if(this.veggies.toString("") ==="none"){
+    return ((this.toppings.length) / 2);
+  } else if(this.toppings.toString("") ==="none"){
+    return ((this.veggies.length) / 2);
+  }else {
     return ((this.veggies.length + this.toppings.length) / 2);
   }
 }
