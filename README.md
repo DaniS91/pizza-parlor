@@ -39,12 +39,8 @@ _Expected Outcome:Pizza { size: "small", sauce: "red", meat: "pepperoni", veggie
 
 #### _Describe: Pizza.prototype.baseCost_
 _Test: With each instance of the Pizza object, it should return the price of the base pizza based only on the size property_
-_Code:_ 
-_const myPizza = new Pizza("small", "red", "pepperoni", ["spinach", "onion"], ["parmesan", "anchovies"]);_
-_myPizza.baseCost;_
-_Expected Outcome:_
-_Pizza { size: "small", sauce: "red", meat: "pepperoni", veggies: ["spinach", "onion"], toppings: ["parmesan", "anchovies"]}_
-_8_
+_Code: myPizza.baseCost;_
+_Expected Outcome: 8_
 
 
 
