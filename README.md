@@ -55,7 +55,10 @@ _Test: Should return .5 if either of the toppings or veggies properties is "none
 _Code: myPizza.toppingsCost();_
 _Expected Outcome: .5_
 
-
+#### _Describe: Pizza.prototype.totalCost()_
+_Test: With each instance of the Pizza object, it should return the total price of the pizza based on the baseCost and toppingsCost properties_
+_Code: myPizza.totalCost();_
+_Expected Outcome: 10_
 
 
 
