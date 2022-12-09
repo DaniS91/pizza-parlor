@@ -42,10 +42,14 @@ _Test: With each instance of the Pizza object, it should return the price of the
 _Code: myPizza.sizeCost();_
 _Expected Outcome: 8_
 
-_Describe: Pizza.prototype.toppingsCost()_
+#### _Describe: Pizza.prototype.toppingsCost()_
 _Test: With each instance of the Pizza object, it should return the total price of the toppings based on the arrays of selected veggies and toppings_
 _Code: myPizza.toppingsCost();_
 _Expected Outcome: 2_
+
+_Test: Should return 0 if both of the veggies and toppings properties are "none"_
+_Code: myPizza.toppingsCost();_
+_Expected Outcome: 0_
 
 
 
