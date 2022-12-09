@@ -51,6 +51,9 @@ _Test: Should return 0 if both of the veggies and toppings properties are "none"
 _Code: myPizza.toppingsCost();_
 _Expected Outcome: 0_
 
+_Test: Should return .5 if either of the toppings or veggies properties is "none" and one other option is selected_
+_Code: myPizza.toppingsCost();_
+_Expected Outcome: .5_
 
 
 
