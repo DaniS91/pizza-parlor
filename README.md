@@ -28,10 +28,10 @@ _{This is a detailed description of your application. Give as much detail as nee
 
 ## _Test-Driven Development Section_
 
-#### _Describe_
-_Test:_
-_Code:_
-_Expected Outcome:_
+#### _Describe: Pizza()_
+_Test: It should return a pizza object with a size property and a sauce property_
+_Code: const myPizza = new Pizza("small", "red");_
+_Expected Outcome:Pizza { size: "small", sauce: "red" }_
 
 
 
