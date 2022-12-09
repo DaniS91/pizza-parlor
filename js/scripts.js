@@ -1,7 +1,5 @@
 // Business Logic
 
-let newPizza = new Pizza;
-
 function Pizza(size, sauce, meat, veggies, toppings) {
   this.size = size;
   this.sauce = sauce;
