@@ -36,7 +36,22 @@ Pizza.prototype.totalCost = function() {
 }
 
 //UI Logic
-
+function makePizza(event) {
+  event.preventDefault();
+  const newPizza = new Pizza;
+  const sizeInput = document.querySelector("input[name=size]:checked").value;
+  const sauceInput = document.querySelector("input[name=sauce]:checked").value;
+  const meatInput = document.querySelector("input[name=meat]:checked").value;
+  const veggiesInput = document.querySelectorAll("input[name=veggies]:checked");
+  const toppingsInput = document.querySelectorAll("input[name=toppings]:checked");
+  const veggiesArray = Array.from(veggiesInput);
+  const toppingsArray = Array.from(toppingsInput)
+  console.log(sizeInput);
+  console.log(sauceInput);
+  console.log(meatInput);
+  console.log(veggiesArray);
+  console.log(toppingsArray);
+}
 
 function resetForm(event) {
   event.preventDefault();
@@ -44,5 +59,5 @@ function resetForm(event) {
 }
 window.addEventListener("load", function() {
   document.querySelector("form").addEventListener("submit", makePizza);
-  this.document.querySelector("form.output").addEventListener("reset", resetForm);
+  document.querySelector("form").addEventListener("reset", resetForm);
   });
