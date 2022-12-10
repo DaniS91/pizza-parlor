@@ -37,3 +37,12 @@ Pizza.prototype.totalCost = function() {
 
 //UI Logic
 
+
+function resetForm(event) {
+  event.preventDefault();
+  location.reload();
+}
+window.addEventListener("load", function() {
+  document.querySelector("form").addEventListener("submit", makePizza);
+  this.document.querySelector("form.output").addEventListener("reset", resetForm);
+  });
