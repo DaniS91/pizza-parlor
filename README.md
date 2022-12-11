@@ -2,18 +2,19 @@
 
 #### By _Dani Steely_
 
-#### _{Brief description of application}_
+#### _This is a simple webpage that allows a user to select pizza toppings for a pizza order. The website compiles all selections and outputs a total price for the order_
 
 ## Technologies Used
 
 * _HTML_
 * _CSS_
 * _Javscript_
-* _here_
+* _Markdown_
+* _TDD_
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+_This is a simple webpage where a user can build their own pizza using selections on a form, with options for: pizza size, sauce, meat, veggies, and additional toppings. On submit, these selections are compiled into a pizza object, which also includes a totalCost method that calculates the total price of the pizza based on the selections. The total price is outputted to a div under the form. There is also a reset button that reloads the form._
 
 ## Setup/Installation Requirements
 
@@ -23,8 +24,7 @@ _{This is a detailed description of your application. Give as much detail as nee
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _Checkboxes in the form include options for 'none', which affects the total price output. I would like to add functionality that unhides the other options when 'none' is deselected. Not necessarily a bug, but this does affect the total price outputted and I would like to fix it asap._
 
 ## _Test-Driven Development Section_
 
@@ -59,9 +59,6 @@ _Expected Outcome: .5_
 _Test: With each instance of the Pizza object, it should return the total price of the pizza based on the baseCost and toppingsCost properties_
 _Code: myPizza.totalCost();_
 _Expected Outcome: 10_
-
-
-
 
 
 ## License
