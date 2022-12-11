@@ -37,20 +37,27 @@ Pizza.prototype.totalCost = function() {
 
 //UI Logic
 
-const newPizza = new Pizza;
-
-function makePizza(event) {
+function handleForm(event) {
   event.preventDefault();
   const sizeInput = document.querySelector("input[name=size]:checked").value;
   const sauceInput = document.querySelector("input[name=sauce]:checked").value;
   const meatInput = document.querySelector("input[name=meat]:checked").value;
-  const veggiesInput = document.querySelectorAll("input[name=veggies]:checked");
-  const toppingsInput = document.querySelectorAll("input[name=toppings]:checked");
-  const veggiesArray = Array.from(veggiesInput);
-  const toppingsArray = Array.from(toppingsInput);
+  const veggiesInputs = document.querySelectorAll("input[name=veggies]:checked");
+  const toppingsInputs = document.querySelectorAll("input[name=toppings]:checked");
+  let veggiesArray = [];
+  veggiesInputs.forEach(function(input) {
+    veggiesArray.push(input.value);
+  });
+  let toppingsArray = [];
+  toppingsInputs.forEach(function(input) {
+    toppingsArray.push(input.value);
+  });
   console.log(sizeInput);
   console.log(sauceInput);
   console.log(meatInput);
+  console.log(veggiesArray);
+  console.log(toppingsArray);
+  let newPizza = new Pizza(sizeInput, sauceInput, meatInput, veggiesArray, toppingsArray);
 }
 
 function resetForm(event) {
@@ -58,6 +65,6 @@ function resetForm(event) {
   location.reload();
 }
 window.addEventListener("load", function() {
-  document.querySelector("form").addEventListener("submit", makePizza);
+  document.querySelector("form").addEventListener("submit", handleForm);
   document.querySelector("form").addEventListener("reset", resetForm);
   });
