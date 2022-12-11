@@ -53,8 +53,9 @@ function handleForm(event) {
     toppingsArray.push(input.value);
   });
   let newPizza = new Pizza(sizeInput, sauceInput, meatInput, veggiesArray, toppingsArray);
-  document.querySelector("p.total-price").innerHTML = null;
-  document.querySelector("p.total-price").innerHTML = `$${newPizza.totalCost().toString()}`;
+  document.querySelector(".total-price").innerHTML = null;
+  document.querySelector(".total-price").innerHTML = `$${newPizza.totalCost().toString()}`;
+  document.querySelector(".hidden").removeAttribute("class", "hidden");
 }
 
 function resetForm(event) {
