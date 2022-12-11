@@ -52,12 +52,22 @@ function handleForm(event) {
   toppingsInputs.forEach(function(input) {
     toppingsArray.push(input.value);
   });
-  console.log(sizeInput);
-  console.log(sauceInput);
-  console.log(meatInput);
-  console.log(veggiesArray);
-  console.log(toppingsArray);
   let newPizza = new Pizza(sizeInput, sauceInput, meatInput, veggiesArray, toppingsArray);
+  displayPrice();
+}
+
+
+function displayPrice(newPizza) {
+  let outputDiv = document.querySelector("div.total-price");
+  outputDiv.innertext = null;
+  const p = document.createElement("p");
+  let totalPrice = newPizza.totalPrice();
+  console.log(totalPrice.toString());
+  p.append(`$${totalPrice}`);
+  console.log(`$${totalPrice}`);
+  outputDiv.append(p);
+  
+
 }
 
 function resetForm(event) {
