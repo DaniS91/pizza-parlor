@@ -53,21 +53,8 @@ function handleForm(event) {
     toppingsArray.push(input.value);
   });
   let newPizza = new Pizza(sizeInput, sauceInput, meatInput, veggiesArray, toppingsArray);
-  displayPrice();
-}
-
-
-function displayPrice(newPizza) {
-  let outputDiv = document.querySelector("div.total-price");
-  outputDiv.innertext = null;
-  const p = document.createElement("p");
-  let totalPrice = newPizza.totalPrice();
-  console.log(totalPrice.toString());
-  p.append(`$${totalPrice}`);
-  console.log(`$${totalPrice}`);
-  outputDiv.append(p);
-  
-
+  document.querySelector("p.total-price").innerHTML = null;
+  document.querySelector("p.total-price").innerHTML = `$${newPizza.totalCost().toString()}`;
 }
 
 function resetForm(event) {
